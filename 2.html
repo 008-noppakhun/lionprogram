@@ -101,6 +101,7 @@ footer{
 <p>คลิกการ์ดเพื่อเข้าไปดูประวัติแบบละเอียด</p>
 </header>
 
+
 <!-- Search Box -->
 <div style="text-align:center; margin:20px;">
     <input 
@@ -118,6 +119,7 @@ footer{
         "
     >
 </div>
+
 
 <!-- หน้าแรก -->
 <div id="home" class="container">
@@ -164,6 +166,7 @@ footer{
 
 </div>
 
+
 <!-- หน้ารายละเอียด -->
 <div id="detail" class="detail-page">
 
@@ -171,13 +174,15 @@ footer{
 
 <img id="dImg">
 <h2 id="dName"></h2>
-<p id="dInfo"></p>
+<pre id="dInfo"></pre>
 
 </div>
+
 
 <footer>
 © 2026 My Hero Academia Fan Web | GG
 </footer>
+
 
 <script>
 
@@ -255,49 +260,66 @@ info:`ชื่อจริง: Toshinori Yagi
 
 };
 
+
 // เปิดหน้ารายละเอียด
 function openPage(id){
-    document.getElementById('home').style.display='none';
-    document.getElementById('detail').style.display='block';
 
-    document.getElementById('dImg').src=data[id].img;
-    document.getElementById('dName').innerText=data[id].name;
-    document.getElementById('dInfo').innerText=data[id].info;
+    document.getElementById("home").style.display = "none";
+    document.getElementById("detail").style.display = "block";
+
+    document.getElementById("dImg").src = data[id].img;
+    document.getElementById("dName").innerText = data[id].name;
+    document.getElementById("dInfo").innerText = data[id].info;
+
 }
+
 
 // กลับหน้าแรก
 function goHome(){
-    document.getElementById('detail').style.display='none';
-    document.getElementById('home').style.display='grid';
+
+    document.getElementById("detail").style.display = "none";
+    document.getElementById("home").style.display = "grid";
+
+    document.getElementById("searchInput").value = "";
+    searchCharacter();
+
 }
 
-// เช็คปุ่ม Enter
+
+// กด Enter
 function checkEnter(e){
-    if(e.key === \"Enter\"){
+
+    if(e.key === "Enter"){
         searchCharacter();
     }
+
 }
 
-// ค้นหาตัวละคร
+
+// ค้นหา
 function searchCharacter(){
 
-    let input = document.getElementById(\"searchInput\").value.toLowerCase();
+    let input = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
 
-    let cards = document.getElementsByClassName(\"card\");
+    let cards = document.getElementsByClassName("card");
 
     for(let i=0;i<cards.length;i++){
 
         let name = cards[i]
-        .getElementsByTagName(\"h2\")[0]
-        .innerText
-        .toLowerCase();
+            .querySelector("h2")
+            .innerText
+            .toLowerCase();
 
         if(name.includes(input)){
-            cards[i].style.display=\"block\";
+            cards[i].style.display = "block";
         }else{
-            cards[i].style.display=\"none\";
+            cards[i].style.display = "none";
         }
     }
+
 }
 
 </script>
