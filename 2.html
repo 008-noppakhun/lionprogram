@@ -14,13 +14,10 @@ body{
 }
 
 header{
-    
     background:#111;
     padding:20px;
     text-align:center;
-    
 }
-
 
 header h1{color:#ffcc00;}
 
@@ -103,6 +100,7 @@ footer{
 <h1>My Hero Academia</h1>
 <p>คลิกการ์ดเพื่อเข้าไปดูประวัติแบบละเอียด</p>
 </header>
+
 <!-- Search Box -->
 <div style="text-align:center; margin:20px;">
     <input 
@@ -148,11 +146,11 @@ footer{
 </div>
 </div>
 
-<div class="card" onclick="openPage('todoroki')">
+<div class="card" onclick="openPage('mina')">
 <img src="https://i.pinimg.com/736x/b8/fe/c5/b8fec5c0ffdf2fb754e52fb37643ce98.jpg">
 <div class="card-content">
 <span class="tag">Hero</span>
-<h2>ashido mina</h2>
+<h2>Ashido Mina</h2>
 </div>
 </div>
 
@@ -166,14 +164,15 @@ footer{
 
 </div>
 
-
 <!-- หน้ารายละเอียด -->
 <div id="detail" class="detail-page">
+
 <button class="back-btn" onclick="goHome()">⬅ กลับหน้าแรก</button>
 
 <img id="dImg">
 <h2 id="dName"></h2>
 <p id="dInfo"></p>
+
 </div>
 
 <footer>
@@ -187,35 +186,76 @@ const data = {
 midoriya:{
 name:"Izuku Midoriya (Deku)",
 img:"https://i.pinimg.com/736x/30/37/23/30372333cdd6865e88d18ee67223949b.jpg",
-info:`ชื่อจริง: อิซึคุ มิโดริยะ (Izuku Midoriya)\n\nพลังพิเศษ (อัตลักษณ์): One For All\n\nประวัติ:\nเดกุเคยเป็นเด็กที่ไม่มีพลังมาก่อน แต่มีความฝันอยากเป็นฮีโร่เสมอ แม้จะถูกคนอื่นดูถูก เขาก็ไม่ยอมแพ้ จนได้พบกับ All Might และได้รับถ่ายทอดพลัง One For All\n\nนิสัย:\nเป็นคนใจดี อ่อนโยน ชอบช่วยเหลือผู้อื่น มีความพยายามสูง และไม่ยอมทิ้งความฝันง่ายๆ\n\nจุดเด่น:\nวิเคราะห์เก่ง มีสมุดจดฮีโร่จำนวนมาก และพัฒนาพลังได้รวดเร็ว\n\nเป้าหมาย:\nเป็นฮีโร่อันดับหนึ่งและปกป้องทุกคน`
+info:`ชื่อจริง: Izuku Midoriya
+
+พลัง: One For All
+
+นิสัย: ใจดี ขยัน ไม่ยอมแพ้
+
+จุดเด่น: วิเคราะห์เก่ง
+
+เป้าหมาย: เป็นฮีโร่อันดับหนึ่ง`
 },
 
 bakugo:{
 name:"Katsuki Bakugo",
 img:"https://i.pinimg.com/736x/fc/7d/cf/fc7dcf982c43fe82aee81a681858cf34.jpg",
-info:`ชื่อจริง: คัตสึกิ บาคุโก (Katsuki Bakugo)\n\nพลังพิเศษ: Explosion (เหงื่อระเบิดได้)\n\nประวัติ:\nบาคุโกเป็นเด็กที่มีพลังเก่งตั้งแต่เล็ก ทำให้มั่นใจในตัวเองสูงมาก ต้องการเป็นที่หนึ่งเสมอ และไม่ชอบแพ้ใคร\n\nนิสัย:\nใจร้อน พูดแรง แต่ลึกๆ เป็นคนจริงจังและรับผิดชอบสูง\n\nจุดเด่น:\nการต่อสู้รวดเร็ว วางแผนเก่ง ใช้พลังได้สร้างสรรค์\n\nเป้าหมาย:\nเป็นฮีโร่อันดับหนึ่งที่แข็งแกร่งที่สุด`
+info:`ชื่อจริง: Katsuki Bakugo
+
+พลัง: Explosion
+
+นิสัย: ใจร้อน มั่นใจ
+
+จุดเด่น: ต่อสู้รวดเร็ว
+
+เป้าหมาย: อันดับหนึ่ง`
 },
 
 todoroki:{
 name:"Shoto Todoroki",
 img:"https://i.pinimg.com/1200x/99/c5/a7/99c5a7c50fbb2b5b423b41a7fdb6e6f1.jpg",
-info:`ชื่อจริง: โชโตะ โทโดโรกิ (Shoto Todoroki)\n\nพลังพิเศษ: ครึ่งไฟ ครึ่งน้ำแข็ง\n\nประวัติ:\nเป็นลูกชายของ Endeavor ถูกฝึกอย่างหนักตั้งแต่เด็ก ทำให้มีปมในใจเกี่ยวกับครอบครัว\n\nนิสัย:\nสุขุม เงียบ พูดน้อย แต่เป็นคนจริงใจและใส่ใจเพื่อน\n\nจุดเด่น:\nใช้พลังสองธาตุพร้อมกัน ควบคุมสนามต่อสู้ได้ดี\n\nเป้าหมาย:\nเป็นฮีโร่ในแบบของตัวเอง ไม่เดินตามพ่อ`
+info:`ชื่อจริง: Shoto Todoroki
+
+พลัง: ไฟ & น้ำแข็ง
+
+นิสัย: สุขุม
+
+จุดเด่น: ควบคุมสนาม
+
+เป้าหมาย: เป็นตัวเอง`
 },
 
 mina:{
 name:"Ashido Mina",
 img:"https://i.pinimg.com/736x/22/49/18/2249183b216ebc54b8c87b0d8190cddb.jpg",
-info:`ชื่อจริง: อาชิโดะ มินะ (Ashido Mina)\n\nพลังพิเศษ: Explosion (เหงื่อระเบิดได้)\n\nประวัติ:\nมินะเป็นเด็กที่มีพลังเก่งตั้งแต่เล็ก ทำให้มั่นใจในตัวเองสูงมาก ต้องการเป็นที่หนึ่งเสมอ และไม่ชอบแพ้ใคร\n\nนิสัย:\nใจร้อน พูดแรง แต่ลึกๆ เป็นคนจริงจังและรับผิดชอบสูง\n\nจุดเด่น:\nการต่อสู้รวดเร็ว วางแผนเก่ง ใช้พลังได้สร้างสรรค์\n\nเป้าหมาย:\nเป็นฮีโร่อันดับหนึ่งที่แข็งแกร่งที่สุด`
+info:`ชื่อจริง: Ashido Mina
+
+พลัง: Acid (กรด)
+
+นิสัย: ร่าเริง สดใส
+
+จุดเด่น: คล่องแคล่ว
+
+เป้าหมาย: เป็นฮีโร่เก่ง`
 },
 
 allmight:{
 name:"All Might",
 img:"https://i.pinimg.com/736x/36/6b/7d/366b7de1a1ba33ba47f5c88ae5fced16.jpg",
-info:`ชื่อจริง: โทชิโนริ ยางิ (Toshinori Yagi)\n\nพลังพิเศษ: One For All\n\nประวัติ:\nอดีตฮีโร่อันดับหนึ่งของญี่ปุ่น เป็นสัญลักษณ์แห่งสันติภาพ ถ่ายทอดพลังให้เดกุ\n\nนิสัย:\nร่าเริง มองโลกในแง่ดี เสียสละเพื่อผู้อื่น\n\nจุดเด่น:\nพลังมหาศาล สร้างแรงบันดาลใจให้คนทั้งประเทศ\n\nบทบาท:\nเป็นครูและต้นแบบของนักเรียนฮีโร่`
+info:`ชื่อจริง: Toshinori Yagi
+
+พลัง: One For All
+
+นิสัย: มองโลกดี
+
+จุดเด่น: พลังสูงมาก
+
+บทบาท: ครู`
 }
 
 };
 
+// เปิดหน้ารายละเอียด
 function openPage(id){
     document.getElementById('home').style.display='none';
     document.getElementById('detail').style.display='block';
@@ -225,9 +265,39 @@ function openPage(id){
     document.getElementById('dInfo').innerText=data[id].info;
 }
 
+// กลับหน้าแรก
 function goHome(){
     document.getElementById('detail').style.display='none';
     document.getElementById('home').style.display='grid';
+}
+
+// เช็คปุ่ม Enter
+function checkEnter(e){
+    if(e.key === \"Enter\"){
+        searchCharacter();
+    }
+}
+
+// ค้นหาตัวละคร
+function searchCharacter(){
+
+    let input = document.getElementById(\"searchInput\").value.toLowerCase();
+
+    let cards = document.getElementsByClassName(\"card\");
+
+    for(let i=0;i<cards.length;i++){
+
+        let name = cards[i]
+        .getElementsByTagName(\"h2\")[0]
+        .innerText
+        .toLowerCase();
+
+        if(name.includes(input)){
+            cards[i].style.display=\"block\";
+        }else{
+            cards[i].style.display=\"none\";
+        }
+    }
 }
 
 </script>
