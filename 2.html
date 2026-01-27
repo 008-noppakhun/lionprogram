@@ -119,6 +119,20 @@ footer{
         "
     >
 </div>
+<!-- ปุ่มผู้จัดทำ -->
+<div style="text-align:center; margin:15px;">
+    <button onclick="openCreator()"
+        style="
+        background:#ffcc00;
+        border:none;
+        padding:8px 18px;
+        border-radius:20px;
+        cursor:pointer;
+        font-weight:bold;
+        ">
+        👤 ผู้จัดทำ
+    </button>
+</div>
 
 
 <!-- หน้าแรก -->
@@ -232,6 +246,29 @@ footer{
 
 
 </div>
+<!-- หน้าผู้จัดทำ -->
+<div id="creator" class="detail-page">
+
+<button class="back-btn" onclick="goHome()">⬅ กลับหน้าแรก</button>
+
+<h2 style="color:#ffcc00;">👤 ผู้จัดทำเว็บไซต์</h2>
+
+<p><b>ชื่อ:</b> GG</p>
+<p><b>ชั้น:</b> ................</p>
+<p><b>โรงเรียน:</b> ................</p>
+<p><b>ผลงาน:</b> เว็บไซต์ My Hero Academia</p>
+
+<hr style="margin:20px 0; border:1px solid #444;">
+
+<p>
+เว็บไซต์นี้จัดทำขึ้นเพื่อใช้ในการเรียนรู้การเขียนเว็บด้วย  
+HTML, CSS และ JavaScript
+</p>
+
+<p>ขอบคุณที่เข้าชมครับ 🙏</p>
+
+</div>
+
 
 <!-- หน้ารายละเอียด -->
 <div id="detail" class="detail-page">
@@ -507,6 +544,14 @@ function searchCharacter(){
             cards[i].style.display = "none";
         }
     }
+
+}
+// เปิดหน้าผู้จัดทำ
+function openCreator(){
+
+    document.getElementById("home").style.display = "none";
+    document.getElementById("detail").style.display = "none";
+    document.getElementById("creator").style.display = "block";
 
 }
 
