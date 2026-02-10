@@ -104,21 +104,36 @@ footer{
 
 <!-- Search Box -->
 <div style="text-align:center; margin:20px;">
-    <input 
-        type="text" 
-        id="searchInput"
-        placeholder="ค้นหาชื่อตัวละคร..."
-        onkeydown="checkEnter(event)"
-        style="
-            padding:10px 15px;
-            width:250px;
-            border-radius:20px;
-            border:none;
-            outline:none;
-            font-size:14px;
-        "
-    >
+    <div style="
+        position:relative;
+        display:inline-block;
+    ">
+        <span style="
+            position:absolute;
+            left:12px;
+            top:50%;
+            transform:translateY(-50%);
+            font-size:16px;
+            color:#555;
+        ">🔍</span>
+
+        <input 
+            type="text" 
+            id="searchInput"
+            placeholder="ค้นหาชื่อตัวละคร..."
+            onkeydown="checkEnter(event)"
+            style="
+                padding:10px 15px 10px 40px;
+                width:250px;
+                border-radius:20px;
+                border:none;
+                outline:none;
+                font-size:14px;
+            "
+        >
+    </div>
 </div>
+
 
 
 
